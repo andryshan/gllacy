@@ -17,7 +17,6 @@
 }
 
 body{
-	background-color: #849d8f;
 	margin: 0;
 	color: white;
 	font-family: 'Roboto', 'Arial', sans-serif;
@@ -48,6 +47,14 @@ input[type='radio'].visually-hidden{
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.site-wrapper{
+	background-color: #849d8f;
+	background-image: url('../img/ice-group1.png');
+	background-repeat: no-repeat;
+	background-position: top center;
+	transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .container{
@@ -102,8 +109,12 @@ input[type='radio'].visually-hidden{
 	display: none; 
 }
 
-.site-nav-sub  a{
+.site-nav-sub a{
 	color: black;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
 }
 
 .site-nav > li{
@@ -117,6 +128,11 @@ input[type='radio'].visually-hidden{
 	padding-left: 13px;
 	padding-top: 7px;
 	padding-bottom: 7px;
+	color: white;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
 }
 
 .site-nav-item:hover > a{
@@ -375,8 +391,8 @@ input[type='radio'].visually-hidden{
 	background-image: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
 	border: none;
 	cursor: pointer;
-	box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
-	display: block;
+	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+	display: inline-block;
 	vertical-align: top;
 	text-align: center;
 }
@@ -476,7 +492,110 @@ input[type='radio'].visually-hidden{
 	justify-content: flex-end;
 }
 
+.slider{
+	position: relative;
+	padding-top: 250px;
+}
 
+.slider-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+
+.slider-item{
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.slider-list h2{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 60px;
+	line-height: 60.35px;
+	font-weight: 700;
+	color: white;
+	padding-top: 25px;
+	padding-bottom: 32px;
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.slide-button{
+	font-size: 32px;
+	line-height: 44px;
+	padding: 10px 40px;
+	border-radius: 30px;
+}
+
+.slider-controls{
+	position: absolute;
+	left: 0;
+	bottom: 38px;
+	z-index: 10;
+	font-size: 0;
+}
+
+.slider-controls label{
+	display: inline-block;
+	vertical-align: top;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.slide{
+	display: none;
+}
+
+#product-1:checked ~ .site-wrapper #slide1,
+#product-2:checked ~ .site-wrapper #slide2,
+#product-3:checked ~ .site-wrapper #slide3{
+	display: block;
+}
+
+#product-1:checked ~ .site-wrapper label[for="product-1"],
+#product-2:checked ~ .site-wrapper label[for="product-2"],
+#product-3:checked ~ .site-wrapper label[for="product-3"]{
+	background-color: white;
+}
+
+#product-1:checked ~ .site-wrapper{
+	background-color: #849d8f;
+	background-image: url('../img/ice-group1.png');
+}
+
+#product-2:checked ~ .site-wrapper{
+	background-color: #8996a6;
+	background-image: url('../img/ice-group2.png');
+}
+
+#product-3:checked ~ .site-wrapper{
+	background-color: #9d8b84;
+	background-image: url('../img/ice-group3.png');
+}
+
+/* Хак для непрыгабщих картинок для слайдера */
+.site-wrapper::before,
+.site-wrapper::after{
+	content: '';
+	visibility: hidden;
+}
+
+.site-wrapper::before{
+	background-image: url('../img/ice-group2.png');
+}
+
+.site-wrapper::after{
+	background-image: url('../img/ice-group3.png');
+}
 
 @-moz-document url-prefix(){
 	.login-form input::-moz-placeholder,
@@ -503,3 +622,4 @@ input[type='radio'].visually-hidden{
 		color: #999999;
 	}
 }
+
