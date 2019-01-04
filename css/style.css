@@ -355,11 +355,11 @@ input[type='radio'].visually-hidden{
 	padding: 0;
 }
 
-.appointment-item:first-of-type{
+.login-form .appointment-item:first-of-type{
 	padding-bottom: 10px;
 }
 
-.appointment-item:last-of-type{
+.login-form .appointment-item:last-of-type{
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -624,7 +624,7 @@ input[type='radio'].visually-hidden{
 
 .raspberries{
 	background-color: #630b26;
-	background-image: url(../img/raspberries.jpg);
+	background-image: url('../img/raspberries.jpg');
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: cover;
@@ -670,7 +670,7 @@ input[type='radio'].visually-hidden{
 }
 
 .popular-list{
-	padding-bottom: 15px;
+	padding-bottom: 20px;
 	padding-right: 0;
 	padding-left: 0;
 	margin: 0;
@@ -703,6 +703,7 @@ input[type='radio'].visually-hidden{
 
 .button-item{
 	display: none;
+	z-index: 10;
 }
 
 .popular-item:hover .button-item{
@@ -725,7 +726,7 @@ input[type='radio'].visually-hidden{
 
 .item-price{
 	margin: 0;
-	font-family: 'Roboto', 'Arial';
+	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: 700;
@@ -739,7 +740,7 @@ input[type='radio'].visually-hidden{
 
 .item-price span{
 	margin: 0;
-	font-family: 'Roboto', 'Arial';
+	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 28px;
 	line-height: 45px;
 	font-weight: 700;
@@ -748,7 +749,7 @@ input[type='radio'].visually-hidden{
 
 .item-title{
 	margin: 0;
-	font-family: 'Roboto', 'Arial';
+	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 500;
@@ -771,11 +772,248 @@ input[type='radio'].visually-hidden{
 	background: url('../img/hit.svg');
 }
 
+.features{
+	background-color: #efe2c9;
+	background-image: url('../img/waffle.jpg');
+	background-repeat: repeat;
+	background-position: 0 0;
+	padding: 20px;
+	border-radius: 15px;
+	margin-bottom: 40px;
+}
+
+.features-title{
+	margin: 0;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 500;
+	color: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.features-description{
+	margin: 0;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	color: black;
+	width: 540px;
+}
+
+.wrapper-features-top{
+	display: flex;
+	padding-top: 17px;
+	padding-bottom: 7px;
+	justify-content: space-between;
+}
+
+.wrapper-features-top .features-description:first-child{
+	padding-left: 57px;
+}
+
+.wrapper-features-top .features-description:last-child{
+	padding-left: 85px;
+}
+
+.wrapper-features-bottom{
+	display: flex;
+	padding-top: 15px;
+	padding-bottom: 3px;
+	justify-content: space-between;
+}
+
+.wrapper-features-bottom .features-description:first-child{
+	padding-left: 57px;
+}
+
+.wrapper-features-bottom .features-description:last-child{
+	padding-left: 85px;
+}
+
+.features-description{
+	position: relative;
+}
+
+.ice-cream::after{
+	content: '';
+	background: url('../img/ice-cream.svg') no-repeat 0 0;
+	width: 49px;
+	height: 49px;
+	top: -14px;
+	left: 0;
+	position: absolute;
+}
+
+.ingredients::after{
+	content: '';
+	background: url('../img/cow.svg') no-repeat 0 0;
+	width: 49px;
+	height: 49px;
+	top: -14px;
+	left: 26px;
+	position: absolute;
+}
+
+.milk::after{
+	content: '';
+	background: url('../img/eco.svg') no-repeat 0 0;
+	width: 49px;
+	height: 49px;
+	top: -14px;
+	left: 0;
+	position: absolute;
+}
+
+.delivery::after{
+	content: '';
+	background: url('../img/thermometer.svg') no-repeat 0 0;
+	width: 49px;
+	height: 49px;
+	top: -14px;
+	left: 26px;
+	position: absolute;
+}
+
+.blog{
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	width: 560px;
+	padding: 15px 20px 83px;
+	border-radius: 15px;
+	box-sizing: border-box;
+	background-image: url('../img/icecream-berry.jpg');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 560px;
+	height: 220px;
+}
+
+.blog p{
+	margin: 0;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 700;
+	color: black;
+	padding-top: 7px;
+	padding-bottom: 4px;
+}
+
+.blog a{
+	display: flex;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+	color: black;
+	text-decoration: underline;
+	width: 300px;
+}
+
+.blog a:hover{
+	color: #e84d37;
+}
+
+.blog a:active{
+	color: #e84d37;
+}
+
+.mailing-list{
+	background-color: #f8f7f4;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+.subscribe-text{
+	margin: 0;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 400;
+	color: #5a5a5a;
+	padding-top: 24px;
+	padding-left: 17px;
+	width: 516px;
+	padding-bottom: 10px;
+}
+
+.wrapper-articles{
+	display: flex;
+	justify-content: space-between;
+}
+
+.subscribe-block{
+	background: repeating-linear-gradient(135deg, #f8f7f4, #f8f7f4 7px, #94ceff 7px, #94ceff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
+	border-radius: 15px;
+	padding: 5px;
+	box-sizing: border-box;
+	width: 560px;
+}
+
+.mailing-list input::-webkit-input-placeholder{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #999999;
+}
+
+.mailing-list input{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: black;
+	font-weight: 700;
+	padding: 9px 12px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	border: 1px solid #d3d3d2;
+	width: 370px;
+}
+
+.mailing-list input:hover{
+	border: 2px solid #d3d3d2;
+	padding: 8px 11px;
+}
+
+.wrapper-subscribe{
+	display: flex;
+	padding-bottom: 30px;
+}
+
+.wrapper-subscribe .appointment-item{
+	margin: 0;
+	padding-top: 26px;
+	padding-left: 16px;
+	margin-right: 10px;
+}
+
+.button-subscribe{
+	align-self: flex-end;
+	padding: 11px 18px;
+	border-radius: 25px;
+}
+
 @-moz-document url-prefix(){
 	.login-form input::-moz-placeholder,
-	.search-form input::-moz-placeholder{ 
+	.search-form input::-moz-placeholder{
 		font-family: 'Roboto', 'Arial', sans-serif;
 		font-size: 14px;
+		line-height: 24px;
+		font-weight: 400;
+		color: #999999;
+	}
+
+	.mailing-list input::-moz-placeholder{
+		font-family: 'Roboto', 'Arial', sans-serif;
+		font-size: 16px;
 		line-height: 24px;
 		font-weight: 400;
 		color: #999999;
