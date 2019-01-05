@@ -947,6 +947,7 @@ input[type='radio'].visually-hidden{
 .wrapper-articles{
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 40px;
 }
 
 .subscribe-block{
@@ -999,6 +1000,98 @@ input[type='radio'].visually-hidden{
 	align-self: flex-end;
 	padding: 11px 18px;
 	border-radius: 25px;
+}
+
+.map{
+	position: relative;
+	height: 430px;
+}
+
+.map p{
+	margin: 0 auto;
+	min-width: 1200px;
+	position: absolute;
+	top: 0;
+}
+
+.map p::before{
+	position: absolute;
+	content: '';
+	width: 80px;
+	height: 140px;
+	top: 141px;
+	left: 236px;
+	background-image: url('../img/pin.svg');
+}
+
+.map.container{
+	width: 1200px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.contacts{
+	width: 302px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 27px;
+	top: 62px;
+	background-color: white;
+	box-sizing: border-box;
+	padding: 25px 25px 31px;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.contacts span{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: black;
+	font-weight: 400;
+}
+
+.contacts-description{
+	width: 153px;
+	padding-top: 4px;
+}
+
+.contacts b{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: black;
+	font-weight: 700;
+	padding-bottom: 12px;
+}
+
+.contacts-phone{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.contacts-number{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: black;
+	font-weight: 700;
+	padding-bottom: 4px;
+}
+
+.contacts-time{
+	margin-bottom: 23px;
+}
+
+.contacts-button{
+	border-radius: 35px;
+	padding: 10px 15px;
+}
+
+.map iframe{
+	z-index: 1;
+	position: relative;
 }
 
 @-moz-document url-prefix(){
