@@ -1217,13 +1217,18 @@ input[type='radio'].visually-hidden{
 .modal-form{
 	background-color: #f8f7f4;
 	width: 477px;
-	margin: 0 auto;
+	top: 50%;
+	left: 50%;
+	margin-top: -130px;
+	margin-left: -236px;
 	box-sizing: border-box;
 	padding: 10px 23px 27px;
 	display: flex;
 	flex-direction: column;
 	border-radius: 10px;
-	position: relative;
+	position: fixed;
+	z-index: 100;
+	display: none;
 }
 
 .modal-form b{
@@ -1334,6 +1339,55 @@ input[type='radio'].visually-hidden{
 	top: 17px;
 	left: 7px;
 	transform: rotate(-45deg);
+}
+
+.modal-show{
+	display: block;
+	animation: bounce 0.6s;
+}
+
+.modal-error{
+	animation: shake 0.6s;
+}
+
+@keyframes bounce {
+	0% {
+	transform: translateY(-2000px);
+	}
+
+	70% {
+	transform: translateY(30px);
+	}
+
+	90% {
+	transform: translateY(-10px);
+	}
+
+	100% {
+	transform: translateY(0);
+	}
+}
+
+@keyframes shake{
+	0%,
+	100%{
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90%{
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60%,
+	80%{
+		transform: translateX(10px);
+	}
 }
 
 @-moz-document url-prefix(){
