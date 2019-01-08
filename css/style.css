@@ -200,8 +200,9 @@ input[type='radio'].visually-hidden{
 	padding: 0;
 	list-style: none;
 	display: flex;
-	width: 267px;
+	width: 350px;
 	padding-top: 15px;
+	justify-content: flex-end;
 
 }
 
@@ -1388,6 +1389,152 @@ input[type='radio'].visually-hidden{
 	80%{
 		transform: translateX(10px);
 	}
+}
+
+.catalog-wrapper{
+	background-color: #98ada1;
+	min-width: 1200px;
+}
+
+.current > a{
+	background-color: #d07058;
+	border-radius: 20px;
+}
+
+.basket-active > a{
+	background-color: white;
+	color: black;
+}
+
+.basket-active:hover path:first-child{
+	fill: #e84d37;
+}
+
+.basket-catalog{
+	display: flex;
+	width: 540px;
+	background-color: #f8f7f4;
+	position: absolute;
+	flex-direction: column;
+	top: 44px;
+	left: -421px;
+	padding: 10px 15px 22px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	display: none;
+}
+
+.basket-active:hover .basket-catalog{
+	display: flex;
+}
+
+.basket-list{
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	list-style: none;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	color: black;
+	font-weight: 400;
+	display: flex;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 7px;
+}
+
+.basket-list img{
+	border-radius: 50%;
+}
+
+.basket-list span{
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.basket-list button{
+	font-size: 0;
+	border: none;
+	background-color: transparent;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	top: 19px;
+	cursor: pointer;
+}
+
+.basket-list button::before{
+	position: absolute;
+	content: '';
+	width: 12px;
+	height: 1px;
+	background-color: black;
+	top: 6px;
+	left: 1px;
+	transform: rotate(-45deg);
+}
+
+.basket-list button::after{
+	position: absolute;
+	content: '';
+	width: 12px;
+	height: 1px;
+	background-color: black;
+	top: 6px;
+	left: 1px;
+	transform: rotate(45deg);
+}
+
+.basket-image{
+	padding-left: 26px;
+}
+
+.basket-description{
+	padding-top: 9px;
+	padding-left: 12px;
+	display: flex;
+	width: 222px;
+}
+
+.basket-count{
+	padding-top: 9px;
+	padding-left: 25px;
+}
+
+.basket-price{
+	padding-top: 9px;
+	padding-left: 28px;
+}
+
+.total-price{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: 700;
+	color: black;
+	align-self: flex-end;
+	padding-top: 22px;
+	padding-bottom: 14px;
+}
+
+.basket-list:last-of-type::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: -9px;
+	background-color: black;
+}
+
+.basket-button{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: white;
+	align-self: flex-end;
+	padding: 10px 15px;
+	border-radius: 30px;
 }
 
 @-moz-document url-prefix(){
