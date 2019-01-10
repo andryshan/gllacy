@@ -10,7 +10,7 @@
 		<div class="catalog-wrapper">
 			<header class="main-header container">
 				<nav class="main-nav">
-					<a href="#" class="main-header-logo">
+					<a href="index.html" class="main-header-logo">
 						<img src="img/logo.svg" alt="Глейси" width="154" height="64">
 					</a>
 					<ul class="site-nav">
@@ -87,12 +87,53 @@
 						</li>
 					</ul>
 				</nav>
-				<section class="header-adress">
-					<h2 class="visually-hidden">Время работы и адрес</h2>
-					<p>С 10 до 20, ежедневно</p>
-					<a href="tel:88124502525">8 812 450-25-25</a>
-				</section>
 			</header>
+
+			<main class="container main-catalog">
+				<section class="breadcrumbs-adress">
+					<ul class="breadcrumbs-list">
+						<li><a href="#">Главная</a></li>
+						<li><a href="#">Каталог</a></li>
+						<li><a>Сливочное</a></li>
+					</ul>
+					<div class="wrapper-adress">
+						<h2 class="visually-hidden">Время работы и адрес</h2>
+						<p>С 10 до 20, ежедневно</p>
+						<a href="tel:88124502525">8 812 450-25-25</a>
+					</div>
+				</section>
+				<h1 class="catalog-title">Сливочное мороженое</h1>
+
+				<section class="filters">
+					<h2 class="visually-hidden">Фильтр товаров</h2>
+					<form method="post" class="filter" action="https://echo.htmlacademy.ru">
+						<fieldset class="sort-field">
+							<legend class="sort-legend">Сортировка:</legend>
+							<select name="sort" class="sort">
+								<option value="popularity">по популярности</option>
+								<option value="unexpensive">сначала недорогие</option>
+								<option value="expensive">сначала дорогие</option>
+								<option value="fat">по жирности</option>
+							</select>
+						</fieldset>
+						<fieldset class="filter-item">
+							<legend class="visually-hidden">Стоимость</legend>
+							<div class="price-controls">
+								<label class="min-price">Цена: <input type="text" name="min-price" value="100"> руб. – </label>
+								<label class="max-price"><input type="text" name="max-price" value="500"> руб.</label>
+							</div>
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
+										<div class="toggle toggle-min"></div>
+										<div class="toggle toggle-max"></div>
+								</div>
+							</div>
+						</fieldset
+					</form>
+				</section>
+
+			</main>
 		</div>		
 	</body>
 </html>

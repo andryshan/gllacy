@@ -1537,6 +1537,259 @@ input[type='radio'].visually-hidden{
 	border-radius: 30px;
 }
 
+.main-catalog{
+	display: flex;
+	flex-direction: column;
+}
+
+.breadcrumbs-list{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	padding-top: 24px;
+}
+
+.breadcrumbs-list a{
+	color: white;
+	text-decoration: underline rgba(255, 255, 255, 0.4);
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	position: relative;
+}
+
+.breadcrumbs-list li{
+	padding-right: 21px;
+}
+
+.wrapper-adress{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.wrapper-adress p{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+	color: white;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 3px;
+}
+
+.wrapper-adress a{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 700;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.breadcrumbs-adress{
+	display: flex;
+	justify-content: space-between;
+}
+
+.breadcrumbs-list li:not(:last-of-type) a::after{
+	position: absolute;
+	content: '»';
+	top: 0;
+	right: -15px;
+}
+
+.breadcrumbs-list li:not(:last-of-type):hover a::after{
+	color: white;
+}
+
+.breadcrumbs-list li:not(:last-of-type) a:hover{
+	color: #ffbc9e;
+}
+
+.breadcrumbs-list li:last-of-type a{
+	text-decoration: none;
+}
+
+.catalog-title{
+	margin: 0;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 35px;
+	line-height: 41px;
+	font-weight: 700;
+	color: white;
+	padding-top: 1px;
+	padding-bottom: 15px;
+}
+
+.filter{
+	padding-top: 14px;
+	display: flex;
+}
+
+.filter fieldset{
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.filter legend{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+}
+
+.sort{
+	border: none;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	padding: 8px 32px 8px 16px;
+	border-radius: 20px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	box-sizing: border-box;
+}
+
+.filters .sort-field{
+	position: relative;
+	width: 193px;
+	margin-right: 15px;
+}
+
+.sort-field::after{
+	position: absolute;
+	content: '';
+	border: 0 solid transparent;
+	border-left-width: 6px;
+	border-right-width: 6px;
+	border-top: 10px solid white;
+	right: 13px;
+	top: 34px;
+}
+
+.sort-legend{
+	padding-left: 16px;
+	padding-bottom: 6px;
+}
+
+.sort-field:hover .sort{
+	color: black;
+}
+
+.sort-field:hover::after{
+	border-top: 10px solid black;
+}
+
+option{
+	padding: 0;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.price-controls{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	vertical-align: top;
+	padding-left: 15px;
+	padding-bottom: 5px;
+}
+
+.price-controls input{
+	padding: 0;
+	margin: 0;
+	width: 25px;
+	height: 15px;
+	color: #fff;
+	font-family: Roboto;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	vertical-align: top;
+	background-color: transparent;
+	border: 0;
+}
+
+.filter-item{
+	width: 220px;
+}
+
+.range-controls{
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding-top: 16px;
+	padding-left: 22px;
+	padding-right: 23px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.range-controls .scale{
+	height: 4px;
+	background: rgba(255,255,255,0.5);
+}
+
+.range-controls .bar{
+	width: 50%;
+	height: 4px;
+	margin-left: 15%;
+	background: rgba(255,255,255,1)
+}
+
+.range-controls .toggle {
+	width: 4px;
+	height: 4px;
+	padding: 0;
+
+	border: 8px solid #ffffff;
+	background-color: #ababab;
+	border-radius: 50%;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 8px;
+	left: 0;
+
+	width: 4px;
+	height: 4px;
+	padding: 0;
+
+	border: 8px solid #ffffff;
+	background-color: #ababab;
+	box-shadow: 0 2px 1px 0 #cfcfcf;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.range-controls .toggle-min {
+	left: 35px;
+}
+
+.range-controls .toggle-max {
+	left: 133px;
+}
+
+.range-controls .toggle:hover{
+	transform: scale(1.1);
+}
+
 @-moz-document url-prefix(){
 	.login-form input::-moz-placeholder,
 	.search-form input::-moz-placeholder{
@@ -1555,6 +1808,14 @@ input[type='radio'].visually-hidden{
 		line-height: 24px;
 		font-weight: 400;
 		color: #999999;
+	}
+
+	.sort{
+		padding: 8px 38px 8px 11px;
+	}
+
+	.sort-field::after{
+		top: 12px;
 	}
 }
 
