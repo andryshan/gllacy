@@ -1629,6 +1629,7 @@ input[type='radio'].visually-hidden{
 .filter{
 	padding-top: 14px;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .filter fieldset{
@@ -1702,7 +1703,7 @@ select::-ms-expand {
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	font-family: Roboto;
+	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 16px;
@@ -1717,7 +1718,7 @@ select::-ms-expand {
 	width: 25px;
 	height: 15px;
 	color: #fff;
-	font-family: Roboto;
+	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 16px;
@@ -1726,8 +1727,9 @@ select::-ms-expand {
 	border: 0;
 }
 
-.filter-item{
+.filters .filter-item{
 	width: 220px;
+	margin-right: 14px;
 }
 
 .range-controls{
@@ -1788,6 +1790,170 @@ select::-ms-expand {
 
 .range-controls .toggle:hover{
 	transform: scale(1.1);
+}
+
+.filter-fatness{
+	margin: 0;
+	padding: 0;
+}
+
+.fatness-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 15px;
+	padding-right: 0;
+}
+
+.fatness-legend{
+	padding-left: 15px;
+	padding-bottom: 6px;
+}
+
+.filter-option{
+	padding-left: 32px;
+	padding-right: 17px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.filter-option label{
+	position: relative;
+	display: block;
+	cursor: pointer;
+	user-select: none;
+}
+
+.filter-input-radio + label::before{
+	content: '';
+	position: absolute;
+	background: url('../img/radio-off.svg') no-repeat;
+	width: 25px;
+	height: 25px;
+	top: -4px;
+	left: -34px;
+	opacity: 0.8;
+}
+
+.filter-input-radio:checked + label::before{
+	content: '';
+	position: absolute;
+	background: url('../img/radio-on.svg') no-repeat;
+	width: 25px;
+	height: 25px;
+	top: -4px;
+	left: -34px;
+	opacity: 0.8;
+}
+
+.filter-input-radio:hover ~ label{
+	color: black;
+}
+
+.filter-input-radio:hover ~ label::before{
+	opacity: 1;
+}
+
+.filter-input-radio:disabled ~ label::before{
+	opacity: 0.4;
+}
+
+.substance-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	width: 702px;
+	box-sizing: border-box;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin-right: 15px;
+}
+
+.substance-legend{
+    padding-top: 16px;
+    padding-left: 15px;
+	padding-bottom: 6px;
+}
+
+.substance-list .filter-option{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 47px;
+	padding-right: 6px;
+}
+
+.filter-input-checkbox + label::before{
+	content: '';
+	position: absolute;
+	background: url('../img/checkbox-off.svg') no-repeat;
+	width: 20px;
+	height: 20px;
+	top: -2px;
+	left: -32px;
+	opacity: 0.8;
+	background-size: contain;
+}
+
+.filter-input-checkbox:checked + label::before{
+	content: '';
+	position: absolute;
+	background: url('../img/checkbox-on.svg') no-repeat;
+	width: 23px;
+	height: 23px;
+	top: -2px;
+	left: -32px;
+	opacity: 0.8;
+	background-size: contain;
+}
+
+.filter-input-checkbox:hover ~ label{
+	color: black;
+}
+
+.filter-input-checkbox:hover ~ label::before{
+	opacity: 1;
+}
+
+.filter-input-checkbox:disabled ~ label::before{
+	opacity: 0.4;
+}
+
+.button-filter{
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+	border: 2px solid white;	
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	border-radius: 20px;
+	align-self: flex-end;
+	padding: 7px 27px;
+}
+
+.button-filter:hover{
+	background-color: white;
+	color: black;
 }
 
 @-moz-document url-prefix(){
