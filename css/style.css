@@ -1042,8 +1042,8 @@ input[type='radio'].visually-hidden{
 	background-color: white;
 	box-sizing: border-box;
 	padding: 25px 25px 31px;
-    border-radius: 15px;
-    z-index: 3;
+	border-radius: 15px;
+	z-index: 3;
 }
 
 .contacts span{
@@ -1887,8 +1887,8 @@ select::-ms-expand {
 }
 
 .substance-legend{
-    padding-top: 16px;
-    padding-left: 15px;
+	padding-top: 16px;
+	padding-left: 15px;
 	padding-bottom: 6px;
 }
 
@@ -2015,6 +2015,7 @@ select::-ms-expand {
 .pagination{
 	display: flex;
 	justify-content: flex-end;
+	margin-bottom: 23px;
 }
 
 .pagination-numbers ul{
@@ -2067,8 +2068,8 @@ select::-ms-expand {
 	position: absolute;
 	width: 7px;
 	height: 7px;
-    top: 8px;
-    left: 2px;
+	top: 8px;
+	left: 2px;
 	border-top: 2px solid white;
 	border-left: 2px solid white;
 	transform: rotate(-45deg);
@@ -2101,6 +2102,21 @@ select::-ms-expand {
 .pagination-forward a{
 	border-radius: 50%;
 	padding: 3px 10px;
+}
+
+.main-footer-catalog{
+	position: relative;
+	padding-bottom: 6px;
+}
+
+.main-footer-catalog::before{
+	content: '';
+	position: absolute;
+	height: 1px;
+	width: 96%;
+	top: 0;
+	left: 27px;
+	background-color: rgba(255,255,255,0.2);
 }
 
 @-moz-document url-prefix(){
@@ -2144,6 +2160,10 @@ select::-ms-expand {
 		line-height: 24px;
 		font-weight: 400;
 		color: #999999;
+	}
+
+	.visually-hidden{
+		display: none;
 	}
 }
 
